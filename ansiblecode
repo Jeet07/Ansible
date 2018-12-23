@@ -1,0 +1,14 @@
+---
+- name: This play will be used to install http server on UAT Environment.
+  hosts: UAT
+  tasks:
+    - name: This task will be used for installing httpd on UAT
+      yum/package: 
+        name: httpd
+        state: present
+        
+        
+to run playbook : ansible-playbook myfirstplaybook.yml --syntax-check
+To dry run :      ansible-playbook myfirstplaybook.yml -C
+        
+        
